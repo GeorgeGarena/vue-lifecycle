@@ -1,0 +1,30 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+*.pyc
+*.sql
+
+# dev folders / files, which will be created during deployment
+/log
+backend/logs/
+# /static
+/.idea/
+access.log
+error.log
+resty/*_temp
+__pycache__
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.swp
+ehthumbs.db
+Thumbs.db
+
+resty/logs
+
+.vscode
+/venv

@@ -1,0 +1,18 @@
+version: "1.0.0"
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5000:5173"
+    volumes:
+      - ./frontend:/node/app
+      - /node/app/node_modules
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile.backend
+    expose:
+      - "8000"
+    command: gunicorn --bind=0.0.0.0:8000 --timeout=300 --workers=2 --threads=8 --keep-alive=60 backend.wsgi:application
