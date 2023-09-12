@@ -12,5 +12,11 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
+    // proxy: {
+    //   "/api": {
+    //     target: "http://localhost:8000/api/",
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   },
+    // },
   },
 });

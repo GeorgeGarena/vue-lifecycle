@@ -1,8 +1,5 @@
-FROM node:16-alpine AS development
-WORKDIR /node/app
+FROM node:16-alpine3.15
 COPY ./frontend/package.json ./
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
 RUN npm install
 WORKDIR /node/app
 CMD ["npm", "run", "dev"]

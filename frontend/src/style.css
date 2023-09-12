@@ -35,7 +35,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -43,6 +44,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+input {
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  margin: 0.2rem;
 }
 
 button {
@@ -55,6 +61,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 0.2rem;
 }
 button:hover {
   border-color: #646cff;

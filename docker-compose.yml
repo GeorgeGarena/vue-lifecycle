@@ -8,11 +8,12 @@ services:
       - "5000:5173"
     volumes:
       - ./frontend:/node/app
-      - /node/app/node_modules
   backend:
     build:
       context: ./
       dockerfile: Dockerfile.backend
+    volumes:
+      - ./backend:/var/www/vue_course_lifecycle
     expose:
       - "8000"
-    command: gunicorn --bind=0.0.0.0:8000 --timeout=300 --workers=2 --threads=8 --keep-alive=60 backend.wsgi:application
+    # command: gunicorn --bind=0.0.0.0:8000 --timeout=300 --workers=2 --threads=8 --keep-alive=60 backend.wsgi:application
