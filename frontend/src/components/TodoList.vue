@@ -68,13 +68,13 @@ async function deleteTodo(id) {
   todoList.value = todoList.value.filter((item) => item.id !== deletedTodo.id);
 }
 
-// get todo
+// get todos
 
 // on update check input text width and update bg color
 
 // on update show combo
 
-// on resize show alert
+// on resize window show alert
 
 // on leave reset listener
 </script>

@@ -2,7 +2,7 @@
   <div>
     <h2>Lifecycle logs</h2>
     <button @click="count += 1" ref="countRef">count: {{ count }}</button>
-    <ChildrenComp :count="count" />
+    <ChildrenComp :count="0" />
   </div>
 </template>
 <script setup>
