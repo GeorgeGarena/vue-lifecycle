@@ -15,7 +15,7 @@ import {
   onBeforeUnmount,
   onUnmounted,
 } from "vue";
-console.log("Children component setup");
+console.log("%cChildren component setup", "color: skyblue");
 const props = defineProps({
   count: Number,
 });

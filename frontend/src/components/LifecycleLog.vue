@@ -16,7 +16,7 @@ import {
   onUnmounted,
 } from "vue";
 import ChildrenComp from "./ChildrenComp.vue";
-console.log("Lifecycle logs setup");
+console.log("%cLifecycleLog setup", "color: orange");
 const count = ref(0);
 const countRef = ref(null);
 

@@ -27,7 +27,15 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import {
+  ref,
+  // onBeforeMount,
+  // onMounted,
+  // onBeforeUpdate,
+  // onUpdated,
+  // onBeforeUnmount,
+  // onUnmounted,
+} from "vue";
 import TodoListItem from "./TodoListItem.vue";
 // import { getRandomColor, getTextWidth, setBackground } from "../utils";
 
@@ -70,7 +78,7 @@ async function deleteTodo(id) {
 
 // get todos
 
-// on update check input text width and update bg color
+// check input text width and update bg color
 
 // on update show combo
 
