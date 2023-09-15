@@ -6,7 +6,7 @@
       <button @click="inputText && createTodo()">create todo</button>
     </div>
     <span ref="textRef" :style="{ width: 'auto' }">{{ inputText }}</span>
-    <div ref="">
+    <div>
       <ul>
         <li v-for="(todo, idx) of todoList" :key="idx">
           <TodoListItem :title="todo.title" :completed="todo.completed" />
@@ -22,11 +22,14 @@
         </li>
       </ul>
     </div>
+
+    <div id="combo" :style="{ display: 'none' }">combo: <span>0</span></div>
   </div>
 </template>
 <script setup>
-import { ref, onUpdated } from "vue";
+import { ref } from "vue";
 import TodoListItem from "./TodoListItem.vue";
+// import { getRandomColor, getTextWidth, setBackground } from "../utils";
 
 const inputText = ref("");
 const inputRef = ref(null);
@@ -64,19 +67,16 @@ async function deleteTodo(id) {
   }).then((res) => res.json());
   todoList.value = todoList.value.filter((item) => item.id !== deletedTodo.id);
 }
-getTodos();
 
-function getRandomColor() {
-  return "#" + ((Math.random() * 0xffffff) << 0).toString(16);
-}
+// get todo
 
-onUpdated(() => {
-  if (textRef.value.getBoundingClientRect().width > 100) {
-    inputRef.value.style.backgroundColor = getRandomColor();
-  } else {
-    inputRef.value.style.backgroundColor = "#000";
-  }
-});
+// on update check input text width and update bg color
+
+// on update show combo
+
+// on resize show alert
+
+// on leave reset listener
 </script>
 <style>
 ul {
@@ -108,5 +108,15 @@ li {
   border: 1px solid red;
   color: red;
   font-weight: bolder;
+}
+
+#combo {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 0px 0 10px white;
 }
 </style>

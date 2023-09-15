@@ -10,11 +10,11 @@ const props = defineProps({
 const itemRef = ref(null);
 
 onMounted(() => {
-  console.log("onMounted: todo list item");
+  // console.log("onMounted: todo list item");
 });
 onUpdated(() => {
-  console.log("onUpdated", props.completed);
-  itemRef.value.scrollIntoView();
+  // console.log("onUpdated", props.completed);
+  // itemRef.value.scrollIntoView();
 });
 </script>
 <style>
