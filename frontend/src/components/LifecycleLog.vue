@@ -2,7 +2,7 @@
   <div>
     <h2>Lifecycle logs</h2>
     <button @click="count += 1" ref="countRef">count: {{ count }}</button>
-    <ChildrenComp :count="0" />
+    <!-- <ChildrenComp :count="0" /> -->
   </div>
 </template>
 <script setup>
@@ -15,7 +15,7 @@ import {
   onBeforeUnmount,
   onUnmounted,
 } from "vue";
-import ChildrenComp from "./ChildrenComp.vue";
+// import ChildrenComp from "./ChildrenComp.vue";
 console.log("%cLifecycleLog setup", "color: orange");
 const count = ref(0);
 const countRef = ref(null);
